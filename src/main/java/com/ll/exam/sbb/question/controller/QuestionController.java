@@ -32,4 +32,12 @@ public class QuestionController {
     public Question findBySubject(String subject) {
         return questionService.findBySubject(subject);
     }
+
+    public Question findBySubjectAndContent(String subject, String content) {
+        return questionService.findBySubjectAndContent(subject, content);
+    }
+
+    public List<Question> findBySubjectLike(String subjectLike) {
+        return questionService.findBySubjectLike(subjectLike);
+    }
 }

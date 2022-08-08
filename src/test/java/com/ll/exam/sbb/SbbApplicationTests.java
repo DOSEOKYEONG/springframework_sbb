@@ -58,4 +58,18 @@ class SbbApplicationTests {
 		Question q = questionController.findBySubject("sbb가 무엇인가요?");
 		assertEquals(1, q.getId());
 	}
+
+	@Test
+	void testJpa5() {
+		Question q = questionController.findBySubjectAndContent(
+				"sbb가 무엇인가요?", "sbb에 대해서 알고 싶습니다.");
+		assertEquals(1, q.getId());
+	}
+
+	@Test
+	void testJpa6() {
+		List<Question> qList = questionController.findBySubjectLike("sbb%");
+		Question q = qList.get(0);
+		assertEquals("sbb가 무엇인가요?", q.getSubject());
+	}
 }

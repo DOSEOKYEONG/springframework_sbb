@@ -33,4 +33,12 @@ public class QuestionService {
     public Question findBySubject(String subject) {
         return questionRepository.findBySubject(subject);
     }
+
+    public Question findBySubjectAndContent(String subject, String content) {
+        return questionRepository.findBySubjectAndContent(subject, content);
+    }
+
+    public List<Question> findBySubjectLike(String subjectLike) {
+        return questionRepository.findBySubjectLike(subjectLike);
+    }
 }
