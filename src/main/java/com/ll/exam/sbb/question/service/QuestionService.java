@@ -41,4 +41,14 @@ public class QuestionService {
     public List<Question> findBySubjectLike(String subjectLike) {
         return questionRepository.findBySubjectLike(subjectLike);
     }
+
+    public Question getQuestion(Integer id) {
+        Optional<Question> question = questionRepository.findById(id);
+        if (question.isPresent()) {
+            return question.get();
+        } else {
+//            throw new DataNotFoundException("question not found");
+        }
+        return null;
+    }
 }
