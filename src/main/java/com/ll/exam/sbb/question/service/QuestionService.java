@@ -11,6 +11,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.repository.query.FluentQuery;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
@@ -48,5 +49,15 @@ public class QuestionService {
 //            throw new DataNotFoundException("question not found");
         }
         return null;
+    }
+
+    public int create(String subject, String content) {
+        Question question = new Question();
+        question.setSubject(subject);
+        question.setContent(content);
+        question.setCreateDate(LocalDateTime.now());
+
+        questionRepository.save(question);
+        return question.getId();
     }
 }
