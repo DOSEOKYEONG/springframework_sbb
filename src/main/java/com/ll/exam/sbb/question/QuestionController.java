@@ -1,10 +1,6 @@
-package com.ll.exam.sbb.question.controller;
+package com.ll.exam.sbb.question;
 
-import com.ll.exam.sbb.answer.Answer;
 import com.ll.exam.sbb.answer.AnswerForm;
-import com.ll.exam.sbb.question.Question;
-import com.ll.exam.sbb.question.QuestionForm;
-import com.ll.exam.sbb.question.service.QuestionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
@@ -13,8 +9,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.time.LocalDateTime;
-import java.util.List;
 import java.util.Optional;
 
 @Controller

@@ -1,14 +1,13 @@
 package com.ll.exam.sbb;
 
 import com.ll.exam.sbb.question.Question;
-import com.ll.exam.sbb.question.controller.QuestionController;
-import com.ll.exam.sbb.question.repository.QuestionRepository;
-import com.ll.exam.sbb.question.service.QuestionService;
+import com.ll.exam.sbb.question.QuestionController;
+import com.ll.exam.sbb.question.QuestionRepository;
+import com.ll.exam.sbb.question.QuestionService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 

@@ -1,18 +1,13 @@
-package com.ll.exam.sbb.question.service;
+package com.ll.exam.sbb.question;
 
-import com.ll.exam.sbb.question.Question;
-import com.ll.exam.sbb.question.repository.QuestionRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.*;
-import org.springframework.data.repository.query.FluentQuery;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.function.Function;
 
 @RequiredArgsConstructor
 @Service

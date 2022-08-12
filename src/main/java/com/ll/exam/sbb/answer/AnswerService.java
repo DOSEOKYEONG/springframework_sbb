@@ -1,7 +1,5 @@
-package com.ll.exam.sbb.answer.service;
+package com.ll.exam.sbb.answer;
 
-import com.ll.exam.sbb.answer.Answer;
-import com.ll.exam.sbb.answer.repository.AnswerRepository;
 import com.ll.exam.sbb.question.Question;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.ll.exam.sbb.question.dto;
+package com.ll.exam.sbb.question;
 
 import com.ll.exam.sbb.question.Question;
 import lombok.Builder;
