@@ -78,13 +78,13 @@ class SbbApplicationTests {
         assertEquals("sbb가 무엇인가요?", q.getSubject());
     }
 
-    @Test
-    void testJpa7() {
-        for (int i = 1; i <= 300; i++) {
-            String subject = String.format("테스트 데이터입니다:[%03d]", i);
-            String content = "내용무";
-            questionService.create(subject, content);
-        }
-    }
+//    @Test
+//    void testJpa7() {
+//        for (int i = 1; i <= 300; i++) {
+//            String subject = String.format("테스트 데이터입니다:[%03d]", i);
+//            String content = "내용무";
+//            questionService.create(subject, content);
+//        }
+//    }
 
 }
