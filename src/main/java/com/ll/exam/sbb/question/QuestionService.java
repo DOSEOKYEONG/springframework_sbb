@@ -1,5 +1,7 @@
 package com.ll.exam.sbb.question;
 
+import com.ll.exam.sbb.DataNotFoundException;
+import com.ll.exam.sbb.user.SiteUser;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
@@ -39,16 +41,16 @@ public class QuestionService {
         if (question.isPresent()) {
             return question.get();
         } else {
-//            throw new DataNotFoundException("question not found");
+            throw new DataNotFoundException("question not found");
         }
-        return null;
     }
 
-    public int create(String subject, String content) {
+    public int create(String subject, String content, SiteUser author) {
         Question question = new Question();
         question.setSubject(subject);
         question.setContent(content);
         question.setCreateDate(LocalDateTime.now());
+        question.setAuthor(author);
 
         questionRepository.save(question);
         return question.getId();

@@ -1,5 +1,6 @@
 package com.ll.exam.sbb.user;
 
+import com.ll.exam.sbb.question.Question;
 import lombok.Getter;
 import lombok.Setter;
 
