@@ -61,7 +61,7 @@ public class AnswerController {
     @PreAuthorize("isAuthenticated()")
     @PostMapping("/modify/{id}")
     public String answerModify(@Valid AnswerForm answerForm, BindingResult bindingResult,
-                                 @PathVariable("id") Integer id, Principal principal) {
+                               @PathVariable("id") Integer id, Principal principal) {
         if (bindingResult.hasErrors()) {
             return "answer_form";
         }
@@ -88,4 +88,14 @@ public class AnswerController {
         return String.format("redirect:/question/detail/%d", answer.getQuestion().getId());
     }
 
+    @PreAuthorize("isAuthenticated()")
+    @GetMapping("/vote/{id}")
+    public String answerVote(Principal principal, @PathVariable("id") Integer id) {
+        Answer answer = answerService.getAnswer(id);
+        SiteUser siteUser = userSecurityService.getUser(principal.getName());
+
+        answerService.vote(answer, siteUser);
+
+        return String.format("redirect:/question/detail/%d", answer.getQuestion().getId());
+    }
 }
